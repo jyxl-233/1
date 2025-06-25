@@ -42,6 +42,7 @@ def dataframe_agent(df, query):
     load_dotenv()
     model = ChatOpenAI(
         base_url='https://api.deepseek.com/',
+       api_key = st.secrets["API_KEY"]
         model="deepseek-chat",
         temperature=0,
         max_tokens=8192
